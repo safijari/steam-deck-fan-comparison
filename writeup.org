@@ -1,0 +1,58 @@
+* A reasonably decent experimental investigation of fan whine in the Valve Steam Deck
+** Introduction
+   In this unnecessarily formally written document I present a reasonably decent experimental investigation of fan whine in the Valve Steam Deck. The fan whine (which I will refer to simply as /whine/ from here on out) tends to exist in a very narrow band in frequency above about 2khz, going all the way up to 5khz depending on the speed of the fan. The whine is /allegedly/ present in at least some but possibly not all fans manufactured by Delta. There are also Steam Deck models that contain a fan manufactured by Huaying which /allegedly/ does not contain the whine.
+   
+   #+CAPTION: Huaying on left, Delta on right
+   #+NAME:   fig:fans
+   [[./images/fans.png]]
+
+   There has also been a suggested fix for the whine in the Delta fans. The so called "tape mod" involved sticking 4 or so small pieces of electrical tape on the inside of the back cover of the Steam Deck right behind the Valve logo. The increased pressure on the fan reportedly changed the acoustics of the fan and reduced the whine. I will be presenting a comparison of the fan whine in the Delta fan, the Delta fan with the tape mode, and finally the Huaying fan.
+** Experiment Setup
+   Data collection consisted of recording the fan noise in a consistent and repeatable environment that's /reasonably free of background noise/ under the circumstances that I do not have access to a studio. The factors I was able to control were keeping the AC off and sending the kids outdoor to toughen them up in the Texas summer. The picture below shows the full recording setup.
+   
+   #+CAPTION: The recording setup
+   #+NAME:   fig:recording
+   [[./images/recording.png]]
+
+   The mic used is the Shure SM7B plugged into a Triton Fethead active preamp which in turn is plugged into a Focusrite Scarlett solo second gen. The SM7B's frequency response is set to be as flat as allowed using the switches on the back. The mic is put very close above the screen of the Steam Deck in a way that the exhaust is closeby but the air from it does not directly hit the mic. Note that the point of the experiment is to record the whine in high quality and not to try to evaluate the noise as a whole which is why the mic is kept close rather than some arbitrary distance away from the Deck based on my personal experience of how I use the Deck.
+   
+   I wanted to capture fan noise for three different configurations:
+   - Original Delta fan
+   - Original Delta fan with tape mod
+   - Replacement Huaying fan from ifixit
+   
+   In order to create a repeatable test, I wrote a script for controlling fan speed as shown in the figure below.
+   
+   #+CAPTION: Fan speed in experiments
+   #+NAME:   fig:fanspeed
+   [[./images/speedsteps.png]]
+** Recordings
+   
+   The three videos below show the resulting recordings of this experiment. The fan RPM at any given time is displayed on the upper left hand side, and the background is a spectrogram of the recording with the y axis representing the frequency in hz (the k means thousand effectively converting it to kilohertz). I recommend listening to all three videos, though in all of them you can skip to at least 3000rpm as nothing interesting happens prior to then.
+   
+   First, the Delta fan without the tape mod.
+    #+BEGIN_EXPORT html
+    <video controls width="640">
+    <source src="images/delta.mp4"
+            type="video/mp4">
+    </video>
+    #+END_EXPORT
+    
+   Second, the Delta fan with the tape mod.
+    #+BEGIN_EXPORT html
+    <video controls width="640">
+    <source src="images/delta with tape mod.mp4"
+            type="video/mp4">
+    </video>
+    #+END_EXPORT
+    
+    And finally, the Huaying fan.
+    #+BEGIN_EXPORT html
+    <video controls width="640">
+    <source src="images/huaying.mp4"
+            type="video/mp4">
+    </video>
+    #+END_EXPORT
+** Analysis
+   Other than simply hearing the recordings I have chosen to build the spectrograms as well as shown in the videos above. In the image below all three spectrograms are vertically stackes for easier comparison. Note that the scales on these are consistent and, as mentioned before, all recordings were made in very similar conditions using the same equipment.
+   
