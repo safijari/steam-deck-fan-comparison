@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-07-14 Thu 00:41 -->
+<!-- 2022-07-14 Thu 01:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -193,6 +193,381 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
+<style type="text/css">
+/******************************************************
+* I copied these styles from markdotto.com, who is
+* the creator of bootstrap, and I also did some
+* modification. Thanks Mark for the beautiful theme,
+* so I reserved the @mdo sign below.
+*****************************************************/
+/*
+__
+__                  /\ \
+/'_`\_    ___ ___    \_\ \    ___
+/'/'_` \ /' __` __`\  /'_` \  / __`\
+/\ \ \L\ \/\ \/\ \/\ \/\ \L\ \/\ \L\ \
+\ \ `\__,_\ \_\ \_\ \_\ \___,_\ \____/
+\ `\_____\\/_/\/_/\/_/\/__,_ /\/___/
+`\/_____/
+*/
+/* Body resets
+-------------------------------------------------- */
+* {
+-webkit-box-sizing:  border-box;
+-moz-box-sizing:  border-box;
+box-sizing:  border-box;
+}
+html, body {
+margin:  0;
+padding:  0;
+}
+html {
+font-size:  62.5%;
+}
+body {
+padding:  20px;
+font-family:  Menlo, Monaco, monospace;
+font-size:  14px;
+line-height:  1.5;
+color:  #666;
+background-color:  #fff;
+}
+p {
+margin:  0 0 20px;
+}
+h1, h2, h3 {
+position:  relative;
+margin:  30px 0 20px;
+font-size:  18px;
+font-weight:  bold;
+line-height:  1.1;
+color:  #111;
+text-rendering:  optimizeLegibility;
+}
+h1:before, h2:before, h3:before {
+position:  absolute;
+top:  auto;
+color:  #ccc;
+display:  none;
+}
+h1:before {
+content:  "";
+left:  -1.25em;
+}
+h2:before {
+content:  "*";
+left:  -2em;
+}
+h3:before {
+content:  "**";
+left:  -2.5em;
+}
+i, em, b, strong {
+padding-left:  .1em;
+padding-right:  .1em;
+}
+b, strong {
+font-weight:  bold;
+color:  #333;
+}
+b:before, b: after, strong:before, strong: after {
+content:  "*";
+}
+i:before, i: after, em:before, em: after {
+content:  "/";
+}
+hr {
+margin:  0;
+border:  0;
+}
+hr: after {
+display:  block;
+margin:  20px 0;
+content:  "----------------------------------------------------------------";
+color:  #ccc;
+}
+ul, ol {
+padding:  0;
+margin:  0 0 20px;
+}
+code, pre {
+font-family:  Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+code {
+color:  #d14;
+}
+code:before, code: after {
+content:  "=";
+color:  #ccc;
+}
+pre {
+display:  block;
+margin:  0 0 14px;
+padding:  15px;
+border-radius:  3px 3px 3px 3px;
+font-size:  18px;
+line-height:  28px;
+background-color:  #f5f5f5;
+white-space:  pre;
+white-space:  pre-wrap;
+word-break:  break-all;
+word-wrap:  break-word;
+}
+blockquote {
+padding:  0 0 0 20px;
+margin:  0 30px 20px -22.5px;
+color:  #999;
+border-left:  8px solid #e5e5e5;
+}
+blockquote p: last-child {
+margin-bottom:  0;
+}
+img {
+display:  block;
+margin:  0;
+border-radius:  5px;
+}
+a {
+font-weight:  inherit;
+line-height:  inherit;
+color:  #000;
+text-decoration:  none;
+}
+sup a:before {
+content:  "[";
+}
+sup a: after {
+content:  "]";
+}
+a: hover {
+text-decoration:  underline;
+}
+table {
+line-height:  2.5;
+margin-bottom:  15px;
+max-width:  100%;
+width:  100%;
+}
+table td, table th {
+padding:  0 15px;
+}
+table th.left, table td.left {
+text-align:  left;
+}
+table th.right, table td.right {
+text-align:  right;
+}
+/******************************************************/
+/* body */
+body {
+margin:  0 auto;
+max-width:  770px;
+}
+/* head */
+.masthead {
+color:  #888;
+}
+.masthead: after {
+display:  block;
+content:  '----------------------------------------------------------------';
+margin:  10px 0;
+color:  #ccc;
+}
+.masthead a {
+color:  #333;
+}
+.masthead ul {
+list-style:  none;
+}
+.masthead li {
+display:  inline-block;
+}
+.masthead li + li:before {
+display:  inline-block;
+content:  "\00B7 \00a0";
+color:  #ccc;
+}
+/* searchform*/
+#searchform {
+position:  absolute;
+top:  54px;
+right:  30.4%;
+}
+#searchform #s {
+background:  url("/media/img/search.png") no-repeat 5px 6px;
+box-shadow:  inset 0 1px 1px rgba(0,0,0,0.1);
+border:  1px solid #ddd;
+border-radius:  2px;
+-moz-border-radius:  2px;
+width:  90px;
+height:  30px;
+line-height:  12px;
+padding:  4px 10px 4px 28px;
+-webkit-transition-duration:  400ms;
+-webkit-transition-property:  width, background;
+-webkit-transition-timing-function:  ease;
+-moz-transition-duration:  400ms;
+-moz-transition-property:  width, background;
+-moz-transition-timing-function:  ease;
+-o-transition-duration:  400ms;
+-o-transition-property:  width, background;
+-o-transition-timing-function:  ease;
+}
+#searchform #s: focus {
+background-color:  #f9f9f9;
+width:  160px;
+}
+.masthead img.avatar {
+position:  relative;
+float:  right;
+margin-top:  -100px;
+margin-bottom:  -100%;
+margin-right:  10%;
+width:  200px;
+background-color:  #fff;
+}
+/* post */
+.post {
+position:  relative;
+}
+.post: after {
+display:  block;
+content:  "----------------------------------------------------------------";
+color:  #ccc;
+}
+.post img {
+max-width:  100%;
+}
+.post li {
+list-style:  none outside none;
+}
+.post ul > li:before {
+content:  "- ";
+margin-left:  -1.25em;
+color:  #ccc;
+}
+.post ol {
+counter-reset:  o-list;
+}
+.post ol > li:before {
+content:  counter(o-list) ") ";
+counter-increment:  o-list;
+margin-left:  -1.85em;
+color:  #ccc;
+}
+/* special for li in pre */
+.post pre li {
+list-style-type:  decimal;
+}
+.post pre li:before {
+display:  none;
+}
+/* meta info */
+.post-info {
+display:  inline-block;
+margin:  -10px 0 -10px;
+color:  #999;
+}
+.post-info + .post-info:before {
+content:  "\2223 \00a0";
+}
+.post-meta: after {
+content:  "----------------------------------------------------------------";
+display:  block;
+margin-top:  -1px;
+color:  #ccc;
+}
+/* table of content */
+#table-of-contents {
+position:  fixed;
+right:  0em;
+top:  0em;
+border: 1px solid #e1e1e8;
+-webkit-box-shadow:  0 0 1em #777777;
+-moz-box-shadow:  0 0 1em #777777;
+-webkit-border-bottom-left-radius:  5px;
+-moz-border-radius-bottomleft:  5px;
+text-align:  center;
+/* ensure doesn't flow off the screen when expanded */
+max-height:  80%;
+overflow:  auto;
+z-index:  200;
+}
+#table-of-contents h2 {
+max-width:  20em;
+font-weight:  normal;
+padding-left:  0.5em;
+padding-top:  0.05em;
+padding-bottom:  0.05em;
+}
+#table-of-contents ul {
+margin-left:  14pt;
+margin-bottom:  10pt;
+padding:  0
+}
+#table-of-contents li {
+padding:  0;
+margin:  1px;
+list-style:  none;
+}
+#table-of-contents ul>: first-child {
+color:  blue;
+}
+#table-of-contents #text-table-of-contents {
+display:  none;
+text-align:  left;
+}
+#table-of-contents: hover #text-table-of-contents {
+display:  block;
+padding:  0.5em;
+margin-top:  -1.5em;
+}
+/* footer */
+.footer {
+margin:  80px 0 0;
+text-align:  center;
+font-size:  15px;
+color:  #999;
+}
+.footer > p {
+margin:  0;
+line-height:  1.5;
+}
+.footpara {
+display:  inline;
+}
+/* Responsive
+-------------------------------------------------- */
+@media (min-width:  768px) {
+/* Increase body padding and font-sizes */
+body {
+padding:  30px;
+font-size:  18px;
+line-height:  1.75;
+}
+h1:before, h2:before, h3:before {
+display:  inline;
+}
+}
+@media (min-width:  1024px) {
+body {
+padding:  30px;
+}
+}
+</style>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',function() {
+document.getElementById("table-of-contents").onclick = function() {
+var elem = document.getElementById("text-table-of-contents");
+elem.style.display = elem.style.display == "block" ? "none" : "block";
+}
+});
+var url = document.location.href;
+var orgsource = url.substring(0, url.lastIndexOf("."))+".org.html";
+function show_org_source(){
+document.location.href = orgsource;
+}
+</script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -242,35 +617,20 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org36e258d">1. A reasonably decent experimental investigation of fan whine in the Valve Steam Deck</a>
-<ul>
-<li><a href="#orgfbd498d">1.1. Introduction</a></li>
-<li><a href="#org42710dc">1.2. Experiment Setup</a></li>
-<li><a href="#org65f92c1">1.3. Recordings</a></li>
-<li><a href="#orgc54e2ba">1.4. Analysis</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org36e258d" class="outline-2">
-<h2 id="org36e258d"><span class="section-number-2">1</span> A reasonably decent experimental investigation of fan whine in the Valve Steam Deck</h2>
+<div id="outline-container-orga3775e8" class="outline-2">
+<h2 id="orga3775e8"><span class="section-number-2">1</span> A reasonably decent experimental investigation of fan whine in the Valve Steam Deck</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgfbd498d" class="outline-3">
-<h3 id="orgfbd498d"><span class="section-number-3">1.1</span> Introduction</h3>
+<div id="outline-container-org46be74c" class="outline-3">
+<h3 id="org46be74c"><span class="section-number-3">1.1</span> Introduction</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 In this unnecessarily formally written document I present a reasonably decent experimental investigation of fan whine in the Valve Steam Deck. The fan whine (which I will refer to simply as <i>whine</i> from here on out) tends to exist in a very narrow band in frequency above about 2khz, going all the way up to 5khz depending on the speed of the fan. The whine is <i>allegedly</i> present in at least some but possibly not all fans manufactured by Delta. There are also Steam Deck models that contain a fan manufactured by Huaying which <i>allegedly</i> does not contain the whine.
 </p>
 
 
-<div id="org13710a3" class="figure">
-<p><img src="./images/fans.png" alt="fans.png" />
+<div id="orgc647c22" class="figure">
+<p><img src="./images/fans.png" alt="fans.png" width="800" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Huaying on left, Delta on right</p>
 </div>
@@ -280,16 +640,16 @@ There has also been a suggested fix for the whine in the Delta fans. The so call
 </p>
 </div>
 </div>
-<div id="outline-container-org42710dc" class="outline-3">
-<h3 id="org42710dc"><span class="section-number-3">1.2</span> Experiment Setup</h3>
+<div id="outline-container-org47c09a7" class="outline-3">
+<h3 id="org47c09a7"><span class="section-number-3">1.2</span> Experiment Setup</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Data collection consisted of recording the fan noise in a consistent and repeatable environment that's <i>reasonably free of background noise</i> under the circumstances that I do not have access to a studio. The factors I was able to control were keeping the AC off and sending the kids outdoor to toughen them up in the Texas summer. The picture below shows the full recording setup.
 </p>
 
 
-<div id="org00ca650" class="figure">
-<p><img src="./images/recording.png" alt="recording.png" />
+<div id="org7ff8834" class="figure">
+<p><img src="./images/recording.png" alt="recording.png" width="800" />
 </p>
 <p><span class="figure-number">Figure 2: </span>The recording setup</p>
 </div>
@@ -312,15 +672,15 @@ In order to create a repeatable test, I wrote a script for controlling fan speed
 </p>
 
 
-<div id="orgd0849cc" class="figure">
+<div id="orgedcec1a" class="figure">
 <p><img src="./images/speedsteps.png" alt="speedsteps.png" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Fan speed in experiments</p>
 </div>
 </div>
 </div>
-<div id="outline-container-org65f92c1" class="outline-3">
-<h3 id="org65f92c1"><span class="section-number-3">1.3</span> Recordings</h3>
+<div id="outline-container-org068e520" class="outline-3">
+<h3 id="org068e520"><span class="section-number-3">1.3</span> Recordings</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 The three videos below show the resulting recordings of this experiment. The fan RPM at any given time is displayed on the upper left hand side, and the background is a spectrogram of the recording with the y axis representing the frequency in hz (the k means thousand effectively converting it to kilohertz). I recommend listening to all three videos, though in all of them you can skip to at least 3000rpm as nothing interesting happens prior to then.
@@ -351,19 +711,51 @@ And finally, the Huaying fan.
 </video>
 </div>
 </div>
-<div id="outline-container-orgc54e2ba" class="outline-3">
-<h3 id="orgc54e2ba"><span class="section-number-3">1.4</span> Analysis</h3>
+<div id="outline-container-orgf407c69" class="outline-3">
+<h3 id="orgf407c69"><span class="section-number-3">1.4</span> Analysis</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Other than simply hearing the recordings I have chosen to build the spectrograms as well as shown in the videos above. In the image below all three spectrograms are vertically stackes for easier comparison. Note that the scales on these are consistent and, as mentioned before, all recordings were made in very similar conditions using the same equipment.
 </p>
+
+<p>
+A quick note on how to read the spectrograms: from left to right, each column of the spectrogram image represents a small slice of time. The bottom of this column represents an audio frequency of 0hz, and as you go further up the column the frequency increases (this is also written ont he vertical axis on the left). The darker that part of the image is, the <i>more</i> the contribution from that frequency. Note that the entire spectrogram gets darker somewhat uniformly as we go from left to right. This is because the fan speed is being increased and so the contribution of <i>all</i> frequencies to the resulting audio is also increasing.
+</p>
+
+
+<div id="orgb0c4178" class="figure">
+<p><img src="./images/stacked spectrograms.png" alt="stacked spectrograms.png" width="800" />
+</p>
+<p><span class="figure-number">Figure 4: </span>All three fans spectrograms</p>
+</div>
+
+<p>
+With this data I have arrived at a set of conclusions that I hope are obvious to everyone that has listened to the recordings and seen the spectrograms:
+</p>
+<ol class="org-ol">
+<li>The Delta fan contains a very narrow band high frequency whine the frequency of which increases as a function of fan speed (I've been told this is because it's a "blade passing frequency"). If you cannot hear this whine in the recordings, you should still be able to see the dark staircase like line in the spectrograms. This is the fan whine.</li>
+<li>Without the tape mod, the whine becomes somewhat audible at only 3000 RPM. This is barely above the RPMs that my Steam Deck idles at (2800). As we go from 3000 to 4000 RPM the whine becomes <i>very</i> obvious and (at least for me) hard to ignore, and things get worse from there.</li>
+<li>The so called "tape mod" does in fact mitigate the whine issue. It appears to delay the whine by about 1000 RPM as it now becomes audible at around 4000 RPM and obvious at around 5000 RPM.</li>
+<li>The Huaying fan contains no discernable whine. In general the fan appears to be just as loud as the Delta fan, but lacks the high frequency tone present in the Delta fan. This is also evident from the spectrogram where no discernable staircase shape can be found.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgc923c6e" class="outline-3">
+<h3 id="orgc923c6e"><span class="section-number-3">1.5</span> Conclusion</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+I uhh &#x2026; don't really know how to end things. Presentations I give at work usually just end with a blank slide which is the visual equivalent of a thud. I don't know why I'm even writing a separate conclusion section, the conclusions are already present in the analysis section.
+</p>
+
+<p>
+tl;dr: The fan whine is very real in at least <i>some</i> Delta fans (or rather, at least <i>one</i>, quite probably more), the "tape mod" does indeed mitigate the whine (no my dears, it's not a placebo, you're not imagining it), and the Huaying fan has no discernable whine.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: jari</p>
-<p class="date">Created: 2022-07-14 Thu 00:41</p>
+<p class="date">Created: 2022-07-14 Thu 01:07</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
